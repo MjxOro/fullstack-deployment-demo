@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-deployment-demo",
+  "version": "1.0.0",
+  "description": "In this demo we will be deploying a full stack application. We will deploy our client (React code) and server (Express server) codebases separately, and connect them for production environment.",
+  "main": "index.js",
+  "scripts": {
+	"start": "npm start --prefix server",
+	"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm install --prefix server && npm run build --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MjxOro/fullstack-deployment-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MjxOro/fullstack-deployment-demo/issues"
+  },
+  "homepage": "https://github.com/MjxOro/fullstack-deployment-demo#readme"
+}
